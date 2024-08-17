@@ -33,6 +33,27 @@
     }
 
     /*==================================*/
+    #toTop{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url(img/totop.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 0 #c9c90a;
+    transition: transform 0.3s, box-shadow 0.3s ;
+}
+#toTop:active{
+    transform: translateY(10px);
+    box-shadow: none;
+}
   </style>
 </head>
 
@@ -859,6 +880,21 @@
         modal.style.display = "none";
       }
     }
+  </script>
+  <!--Go To Top-->
+  <script>
+    let toTop = document.getElementById('toTop');
+toTop.style.display = 'none';
+window.addEventListener('scroll', () => {
+    if(this.scrollY > 500){
+        toTop.style.display = 'block';
+    }else{
+        toTop.style.display = 'none';
+    }
+})
+toTop.onclick = function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
   </script>
 
 </body>
