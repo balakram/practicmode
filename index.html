@@ -33,27 +33,7 @@
     }
 
     /*==================================*/
-    #toTop{
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    background-image: url(img/totop.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: yellow;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 10px 0 #c9c90a;
-    transition: transform 0.3s, box-shadow 0.3s ;
-}
-#toTop:active{
-    transform: translateY(10px);
-    box-shadow: none;
-}
+
   </style>
 </head>
 
@@ -303,7 +283,7 @@
                     <p>Now you know all the basics to start typing with 10 fingers. Just try out our typewriting
                       training program right now:</p>
                     <p><a class="btn green cta" href="lesson/1.html">Go to typing lessons</a>
-                    <div class="box adbox adsense"><a id="toTop" class="popup-btn></a>
+                    <div class="box adbox adsense">
                       <p class="info" style="text-align: right;margin-bottom: 5px;color: #AAA;">𝐵𝒶𝓁𝒶𝓀𝓇𝒶𝓂
                         𝒯𝓊𝒹𝓊</p><ins class="adsbygoogle" style="display:block; text-align:center;"
                         data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5713762016499057"
@@ -882,19 +862,7 @@
     }
   </script>
   <!--Go To Top-->
-  <script>
-    let toTop = document.getElementById('toTop');
-toTop.style.display = 'none';
-window.addEventListener('scroll', () => {
-    if(this.scrollY > 500){
-        toTop.style.display = 'block';
-    }else{
-        toTop.style.display = 'none';
-    }
-})
-toTop.onclick = function(){
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+
   </script>
 
 </body>
