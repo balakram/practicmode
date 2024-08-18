@@ -33,6 +33,64 @@
     }
 
     /*==================================*/
+  .hover-btn {
+  width: 300px;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: transparent;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.2s;
+  color: #fff;
+}
+
+.hover-btn:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  background: #06c988a4;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: top;
+}
+
+.hover-btn:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  background: #ffff00a6;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+.hover-btn:hover:before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(75deg);
+}
+
+.hover-btn:hover:after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(-75deg);
+}
+
+.hover-btn:hover {
+  color: #000;
+}
 
   </style>
 </head>
@@ -83,9 +141,9 @@
     <div id="popupModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <img src="btlogo-icon.png" alt="Popup Image" style="width:5%; height: auto;">
+        <img src="btlogo-icon.png" alt="Popup Image" style="width:5%; height: auto;"  id="top1">
         <h1
-          style=" text-align: center; font-weight: bolder; color: #333;  margin-top: 0;  margin-bottom: 15px; font-size: 24px; " id="top1">
+          style=" text-align: center; font-weight: bolder; color: #333;  margin-top: 0;  margin-bottom: 15px; font-size: 24px;" >
           Typing with 10 fingers quickly explained</h1>
         <div class="grid-outline-center area clearfix">
           <div class="grid-12 grid-xl-8">
@@ -282,7 +340,7 @@
                   <div>
                     <p>Now you know all the basics to start typing with 10 fingers. Just try out our typewriting
                       training program right now:</p>
-                    <p><a class="btn green cta" href="lesson/1.html">Go to typing lessons</a>
+                    <p><a class="class="hover-btn cta" href="lesson/1.html">Go to typing lessons</a>
                     <div class="box adbox adsense">
                       <a class="btn cta" href="#top1">Go top</a>
                       <p class="info" style="text-align: right;margin-bottom: 5px;color: #AAA;">𝐵𝒶𝓁𝒶𝓀𝓇𝒶𝓂
@@ -303,10 +361,11 @@
 
     <div id="middle">
       <h1>Welcome to Typing Practice Mode!</h1>
-      <p class="welcome-note" class="clock">
-        <!--Start improving your typing speed and accuracy today with our free lessons and typing test.-->
+       <!--<p class="welcome-note" >
+       Start improving your typing speed and accuracy today with our free lessons and typing test.
         
-      </p>
+      </p>-->
+      <div class="clock welcome-note"> </div>
       <br>
       <div id="first">
         <!--<div id="intro" class="slideshow-container welcome-note1">
