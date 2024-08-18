@@ -1554,8 +1554,8 @@ input:checked + .slider:before {
 
 /*-==================================Digital clock============================*/
     @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
-    .clock {
-  background-color: rgba(0, 0, 0, 0.164);
+.clock {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
   font-family: "Orbitron", sans-serif;
   display: flex;
   justify-content: center;
@@ -1563,7 +1563,14 @@ input:checked + .slider:before {
   color: #20c20e;
   font-size: 60px;
   letter-spacing: 7px;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 10px #20c20e, 0 0 20px #20c20e, 0 0 30px #20c20e;
+  -webkit-text-stroke: 1px #ff0000; /* Red border around the text */
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
+
 
 /*====================================Hover btn========================*/
   .hover-btn {
